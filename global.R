@@ -18,5 +18,6 @@ library(terra)
 library(plotly)
 library(ggplot2)
 library(DT)
+library(rbokeh)
 #  Clean Scripts ----------------------------------------------------------
 source("source.R")
