@@ -7,4 +7,4 @@ Link to the website:
 https://shiny.rcg.sfu.ca/u/sweldon/Walkability/
 
 Launching the App:
-In the R IDE, enter into the terminal: runApp("Vancouver-Walkability-Analysis")
+In an R IDE, enter: runApp("Vancouver-Walkability-Analysis")
