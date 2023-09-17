@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="tailwind.css">
+    <!-- import fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">  
+     {{ headContent() }}
+</head>
+
+<body class="text-gray-1 font-poppins">
+    <header class="py-8">
+        <div class="container flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
+        <div class="text-lg">SDA490 - Capstone Project</div>
+             <div class="hidden md:flex space-x-12 items-center">
+                <a href="#", class="text-selected-text">Home</a>
+                <a href="about.html">About</a>
+             </div>
+    
+             <!-- in future: make clickable so it shows the previously hidden menu on click in mobile friendly way-->
+             <div class="md:hidden">
+                <svg width="26" height="18" viewBox="0 0 26 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13 17.5H0.25V14.6667H13V17.5ZM25.75 10.4167H0.25V7.58333H25.75V10.4167ZM25.75 3.33333H13V0.5H25.75V3.33333Z" fill="black"/>
+                </svg>
+             </div>
+        </div>
+    </header>
+
+    <div class="absolute inset-x-0 top-1/2 -z-10 -translate-y-1/2 transform-gpu overflow-hidden opacity-30 blur-3xl" aria-hidden="true">
+    <div class="ml-[max(50%,38rem)] aspect-[1313/771] w-[82.0625rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+    </div>
+    <div class="absolute inset-x-0 top-0 -z-10 flex transform-gpu overflow-hidden pt-32 opacity-25 blur-3xl sm:pt-40 xl:justify-end" aria-hidden="true">
+    <div class="ml-[-22rem] aspect-[1313/771] w-[82.0625rem] flex-none origin-top-right rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] xl:ml-0 xl:mr-[calc(50%-12rem)]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+    </div>
+
+    <div class="container flex justify-between items-center px-8 md:px-14 lg:px-20 w-full">
+        <div class="flex flex-wrap md:flex-nowrap">
+            <!-- add class: "hidden xl" to only show nav bar on big screens-->
+            <nav class="inline-block lg:mr-24 lg:w-4 fixed left-percentage hidden md:block z-50 mt-2">
+                <div class="absolute left-50 transform -translate-x-1/2 space-y-4 mt-20">
+                <a href="#" class="nav-dot selected-circle block w-5 h-5 rounded-full border-2 border-blue-2 bg-body bg-opacity-60">
+                    <span class="bg-white-2 text-white-2 px-2 py-1 rounded-md ml-10 opacity-0"></span>
+                </a>
+                <a href="#1" class="nav-dot block w-5 h-5 rounded-full border-2 border-blue-2 bg-body bg-opacity-60">
+                    <span class="bg-white-2 text-white-2 px-2 py-1 rounded-md ml-10 opacity-0"></span>
+                </a>
+                </a>
+                <a href="#2" class="nav-dot block w-5 h-5 rounded-full border-2 border-blue-2 bg-body bg-opacity-60">
+                    <span class="bg-white-2 text-white-2 px-2 py-1 rounded-md ml-10 opacity-0"></span>
+                </a>
+                </a>
+                <a href="#3" class="nav-dot block w-5 h-5 rounded-full border-2 border-blue-2 bg-body bg-opacity-60">
+                    <span class="bg-white-2 text-white-2 px-2 py-1 rounded-md ml-10 opacity-0"></span>
+                </a>
+                </a>
+                <a href="#4" class="nav-dot block w-5 h-5 rounded-full border-2 border-blue-2 bg-body bg-opacity-60">
+                    <span class="bg-white-2 text-white-2 px-2 py-1 rounded-md ml-10 opacity-0"></span>
+                </a>
+              </a>
+              <a href="#5" class="nav-dot block w-5 h-5 rounded-full border-2 border-blue-2 bg-body bg-opacity-60">
+                  <span class="bg-white-2 text-white-2 px-2 py-1 rounded-md ml-10 opacity-0"></span>
+              </a>
+              </a>
+              <a href="#6" class="nav-dot block w-5 h-5 rounded-full border-2 border-blue-2 bg-body bg-opacity-60">
+                  <span class="bg-white-2 text-white-2 px-2 py-1 rounded-md ml-10 opacity-0"></span>
+              </a>
+            </a>
+            <a href="#7" class="nav-dot block w-5 h-5 rounded-full border-2 border-blue-2 bg-body bg-opacity-60">
+                <span class="bg-white-2 text-white-2 px-2 py-1 rounded-md ml-10 opacity-0"></span>
+            </a>
+          </a>
+          <a href="#8" class="nav-dot block w-5 h-5 rounded-full border-2 border-blue-2 bg-body bg-opacity-60">
+              <span class="bg-white-2 text-white-2 px-2 py-1 rounded-md ml-10 opacity-0"></span>
+          </a>
+          </a>
+          <a href="#9" class="nav-dot block w-5 h-5 rounded-full border-2 border-blue-2 bg-body bg-opacity-60">
+              <span class="bg-white-2 text-white-2 px-2 py-1 rounded-md ml-10 opacity-0"></span>
+          </a>
+          <a href="#10" class="nav-dot block w-5 h-5 rounded-full border-2 border-blue-2 bg-body bg-opacity-60">
+            <span class="bg-white-2 text-white-2 px-2 py-1 rounded-md ml-10 opacity-0"></span>
+        </a>
+        </a>
+        <a href="#11" class="nav-dot block w-5 h-5 rounded-full border-2 border-blue-2 bg-body bg-opacity-60">
+            <span class="bg-white-2 text-white-2 px-2 py-1 rounded-md ml-10 opacity-0"></span>
+        </a>
+
+                </div>
+            </nav>
+    
+            <div class="flex flex-wrap lg:ml-20 justify-center md:justify-start max-w-xl mt-0 md:my-44">
+                <h1 class="font-bold text-5xl md:text-6xl lg:text-7xl text-center md:text-left">
+                    The Future<br> is Walkable.
+                </h1>
+                <p class="mt-5 text-lg">
+                  Considering the Transportation 2040 plan, how can walkability be improved to meet Vancouver’s
+                   projected 2040 population needs in a way that will foster urban mobility?
+                </p>
+                <div class="w-full flex justify-center md:justify-start">
+                  <a href="#1">
+                    <button class="px-8 py-4 bg-blue-2 text-white-1 font-bold mt-12 flex items-center space-x-3">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                                <path fill-rule="evenodd" d="M9.315 7.584C12.195 3.883 16.695 1.5 21.75 1.5a.75.75 0 01.75.75c0 5.056-2.383 9.555-6.084 12.436A6.75 6.75 0 019.75 22.5a.75.75 0 01-.75-.75v-4.131A15.838 15.838 0 016.382 15H2.25a.75.75 0 01-.75-.75 6.75 6.75 0 017.815-6.666zM15 6.75a2.25 2.25 0 100 4.5 2.25 2.25 0 000-4.5z" clip-rule="evenodd" />
+                                <path d="M5.26 17.242a.75.75 0 10-.897-1.203 5.243 5.243 0 00-2.05 5.022.75.75 0 00.625.627 5.243 5.243 0 005.022-2.051.75.75 0 10-1.202-.897 3.744 3.744 0 01-3.008 1.51c0-1.23.592-2.323 1.51-3.008z" />
+                            </svg>                             
+                        </div>
+                        <span>Begin</span>
+                    </button>
+                  </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!---------------------- SECTION: IMAGE + TEXT BOX ---------------------->  
+
+    <section id="1" class="relative z-0 bg-blue-5 h-screen">
+        <!--<img class="min-h-screen" src="https://cities-today.com/wp-content/uploads/2022/02/future-transportation.jpg">-->
+        <img class="min-h-screen" src="/images/about_background.jpg">
+        <div class="w-96 bg-white-1 absolute top-24 ml-32 rounded-lg shadow-lg p-6">
+          <h1 class="text-3xl font-bold">Why Walkability Matters</h1><br>
+          <div>
+            <ul class="list-disc ml-6">
+              <li class="py-1">Financially accessible to all</li>
+              <li class="py-1">Increases overall health of the community</li>
+              <li class="py-1">Decreases road congestion</li>
+              <li class="py-1">Improves air quality</li>
+          </ul>
+          </div>
+        </div>
+      
+      <div class="wave">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+            <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+            <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+        </svg>
+    </div>
+    </section>
+
+<!---------------------- SECTION: KEY STATS + IMAGE ---------------------->
+
+    <section id="2" class="pt-20 mt-40">
+      <h1 class="font-bold text-3xl text-center">
+
+    </h1>
+      <div class="ml-32 mr-8 px-4 sm:px-6 lg:max-w-7xl lg:px-8 flex justify-between">
+        <div class="w-96">
+          <div class="lg:flex lg:flex-auto lg:justify-center">
+            <dl class="w-64 space-y-8 xl:w-80">
+              <div class="flex flex-col-reverse gap-y-4">
+                <dt class="text-base leading-7 text-gray-600"></dt>
+                <dd class="text-5xl font-semibold tracking-tight text-gray-900"></dd>
+              </div>
+  
+              <div class="flex flex-col-reverse gap-y-4">
+                <dt class="text-base leading-7 text-gray-600">Decline in Driving when walkscore > 75</dt>
+                <dd class="text-5xl font-semibold tracking-tight text-gray-900">26.8%</dd>
+              </div>
+  
+              <div class="flex flex-col-reverse gap-y-4">
+                <dt class="text-base leading-7 text-gray-600">Potential Metric Tons of CO<sub>2</sub> Avoided 2021</dt>
+                <dd class="text-5xl font-semibold tracking-tight text-gray-900">97,500<sup><small>1</small></sup></dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+        <img class="w-3/5" src="http://media.bizj.us/view/img/11366585/screen-shot-2019-06-28-at-34721-pm.png">
+      </div>
+
+     
+      <div class="w-full px-0 mt-24">
+        <div class="p-6 bg-white-2 rounded-lg mx-28">
+          <p> For a city to be walkable, pedestrians need to feel safe throughout
+            their commute. Measures such as traffic calming, wide sidewalks and controlled 
+            intersections make this possible.</p><br>
+         <p class="text-sm">
+           <a href="https://www.epa.gov/greenvehicles/greenhouse-gas-emissions-typical-passenger-vehicle" class="italic">
+             <sup>1</sup>Average yearly quantity of CO<sub>2</sub> produced per passenger vehicle, <ins class="text-blue-2">Retrieved from US EPA</ins></a>
+             <br>
+             Calculated as reduction in yearly carbon emmissions expected if all areas 
+             of City of Vancouver had a <a href="https://www.walkscore.com/how-it-works/">Walk Score&reg;</a> 
+             of at least 75 in 2021
+         </p>
+        </div>
+      </div>
+
+    </div>
+    </section>
+
+<!---------------------- SECTION: WALK SCORE MAP ---------------------->
+
+    <section id="3">
+    <div class="ml-24 mt-60 max-w-3xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+            <h1 class="font-bold text-3xl text-center py-20">
+              <a href="https://www.walkscore.com/how-it-works/">Walk Score&reg;</a> Ranking Across the City of Vancouver
+            </h1>
+        <!-- Main 3 column grid -->
+        <div class="grid grid-cols-1 items-start lg:grid-cols-3 gap-2">
+          <!-- Left column -->
+          <div class="grid grid-cols-1 gap-0 lg:col-span-2">
+              <div class="overflow-hidden rounded-lg bg-blue-2 shadow p-2 map_height">
+                <div class="">
+                  <!--  Your Content -->
+                   {{ walk_score_map }}
+                  <!--<img src="./images/walk_score_map.png">-->
+                </div>
+              </div>
+          </div>
+    
+          <!-- Right column -->
+          <div class="grid grid-cols-1 gap-4">
+              <div class="overflow-hidden rounded-lg bg-white-1 map_height">
+                <p class="p-8 text-lg">
+                  To create an accessible and walkable city, it is important to
+                   first look at the city’s current landscape and identify specific
+                    areas for improvement. To do this, we have calculated the average 
+                    <a href="https://www.walkscore.com/how-it-works/">Walk Score&reg;</a> for each census tract.<br><br>
+                     <a href="https://www.walkscore.com/how-it-works/">Walk Score's&reg;</a> consider the proximity of
+                     amenities and are an important factor when people look for places to live, work and visit.                 
+                </p>
+              </div>
+          </div>
+        </div>
+    </div>
+    </section>
+
+<!---------------------- SECTION: WAlKING ~ WALK SCORE PLOT ---------------------->
+
+    <section id="4">
+    <div class="ml-24 mt-60 max-w-3xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+            <h1 class="font-bold text-3xl text-center py-20">
+                Correlation between <a href="https://www.walkscore.com/how-it-works/">Walk Score&reg;</a> and Proportion of Population Walking
+            </h1>
+        <!-- Main 3 column grid -->
+        <div class="grid grid-cols-1 items-start lg:grid-cols-3 gap-2">
+          <!-- Left column -->
+
+    
+          <!-- Right column -->
+          <div class="grid grid-cols-1 gap-4">
+              <div class="overflow-hidden rounded-lg bg-white-1 map_height">
+                 <p class="p-8 text-lg">
+                  A strong correlation
+                    exists between the percentage of the population who walks as a primary
+                    method of commute and the area's <a href="https://www.walkscore.com/how-it-works/">Walk Score&reg;</a> when the walk score is 75 or higher, which
+                     can be seen through the steep incline of the slope.<br><br> These findings suggest
+                     <b>a <a href="https://www.walkscore.com/how-it-works/">Walk Score&reg;</a> of 75 or above is essential to encourage walking</b>
+                       among residents.</p>
+              </div>
+          </div>
+
+          <!-- Left column -->
+          <div class="grid grid-cols-1 gap-0 lg:col-span-2">
+              <div class="overflow-hidden rounded-lg bg-blue-2 shadow p-2 map_height">
+                <div class="">
+                  <!--  Your Content -->
+                   {{ walk_plot }}
+                  <!-- <img src="./images/walk_plot.png"> -->
+                </div>
+              </div>
+          </div>
+        </div>
+    </div>
+    </section>
+
+<!---------------------- SECTION: COLLISION MAP ---------------------->
+
+<section id="5">
+  <div x-data="{ activeTab: 'census' }" class="ml-24 mt-60 max-w-3xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+          <h1 class="font-bold text-3xl text-center py-20">
+              Vehicle Collisions  Across the City of Vancouver in 2022
+          </h1>
+      <!-- Main 3 column grid -->
+      <div class="grid grid-cols-1 items-start lg:grid-cols-3">
+        <!-- Left column -->
+        <div class="grid grid-cols-1 lg:col-span-2">
+          <div class="overflow-hidden rounded-l-lg bg-blue-2 shadow p-2 map_height">
+
+               <div class="bg-blue-1"> 
+                {{ collision_map }}     
+                <!--<img src="./images/collision_map_2.png">-->
+               </div>
+
+
+          </div>
+        </div>
+        
+        <!-- Right column -->
+        <div class="grid grid-cols-1">
+
+         <a x-on:click.prevent="activeTab = 'census'" :class="{ 'button-active': activeTab === 'census' }" href="#census" 
+         class="button overflow-hidden rounded-r-lg h-52">
+
+              <div class="p-8 text-lg action-button cursor-pointer" id="map_1_button"> 
+                <span class="font-semibold">Census Tract Collision Map</span><br>  
+                <p class="text-gray-1 mt-2 text-base">
+                  Static overview showing number of collisions per 5000 people in each census tract.
+                </p>       
+              </div>
+
+          </a>
+
+          <a x-on:click.prevent="activeTab = 'cluster'" :class="{ 'button-active': activeTab === 'cluster' }" href="#cluster" 
+          class="button overflow-hidden rounded-r-lg h-52">  
+
+              <div class="p-8 text-lg action-button cursor-pointer" id="map_2_button">
+                <span class="font-semibold">Clustered Collision Map</span><br>
+                <p class="text-gray-1 mt-2 text-base">
+                  Interactive clustering of absolute crash counts and their locations.<br> Try zooming in!
+                </p>
+              </div>
+
+          </a>
+
+        </div>
+      </div>
+
+      <div class="w-full px-0 mt-16">
+        <div class="p-6 bg-white-2 rounded-lg mx-28">
+          <p>
+            For a city to be walkable, pedestrians need to feel safe throughout their commute.
+            Measures such as traffic calming, wide sidewalks and controlled intersections will
+            help to reduce the frequency of vehicle collisions.  
+          </p>
+        </div>
+      </div>
+
+      
+    </div>
+  </section>
+
+<!---------------------- SECTION: PERSONAL SAFETY PLOTS 1 ---------------------->
+
+<section id="6">
+  <div class="ml-24 mt-60 max-w-3xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+          <h1 class="font-bold text-3xl text-center py-20">
+             How Safe Do You Feel in Your City
+          </h1>
+      <!-- Main 3 column grid -->
+      <div class="grid grid-cols-1 items-start lg:grid-cols-3 gap-2">
+        <!-- Left column -->
+        <div class="grid grid-cols-1 gap-0 lg:col-span-2">
+            <div class="overflow-hidden rounded-lg bg-blue-2 shadow p-2 map_height">
+              <div class="">
+                <!--  Your Content -->
+                 {{ city_plot }}
+                <!-- <img src="./images/safety_plot_1.png"> -->
+                
+              </div>
+            </div>
+        </div>
+        <!-- Right column -->
+        <div class="grid grid-cols-1 gap-4">
+            <div class="overflow-hidden rounded-lg map_height p-8 ">
+              <p class="text-lg">
+                Metro Vancouver subjects ranked safety on transit and safety in their community a 7/10,
+                 with most reporting that safety in their community has gotten worse over time.
+              </p>
+              <div class="min-w-[35%] mt-12 flex justify-center">{{ age_range }}</div>
+            </div>
+        </div>
+      </div>
+
+      <div class="w-full grid lg:grid-cols-3">
+        <div class="lg:col-span-2"></div>
+        <div class="px-8 flex justify-center"> {{ survey_question }}</div>
+      </div>
+      
+  </div>
+  </section>
+
+<!---------------------- SECTION: PERSONAL SAFETY PLOTS 2 ---------------------->
+
+<section id="7">
+  <div class="ml-24 mt-60 max-w-3xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+    <h1 class="font-bold text-3xl text-center py-20">
+      Gender Differences in Perception of Safety
+  </h1>
+      <!-- Main 3 column grid -->
+      <div class="grid grid-cols-1 items-start lg:grid-cols-3 gap-2">
+        <!-- Left column -->
+        <div class="grid grid-cols-1 gap-0 lg:col-span-2">
+            <div class="overflow-hidden rounded-lg bg-blue-2 shadow p-2 map_height">
+              <div class="">
+                <!--  Your Content -->
+                 {{ safe_transit_plot }} 
+                <!-- <img src="./images/safety_plot_2.png">-->
+              </div>
+            </div>
+        </div>
+        <!-- Right column -->
+        <div class="grid grid-cols-1 gap-4">
+            <div class="overflow-hidden rounded-lg bg-white-1 map_height">
+              <p class="p-8 text-lg">
+                Across the board, youth, seniors and women report that they feel less safe in their city.
+                 Addressing the safety concerns of vulnerable populations will improve accessible urban
+                  mobility options.
+              </p>
+            </div>
+        </div>
+      </div>
+  </div>
+  </section>
+
+  <!---------------------- SECTION: WALKABLE CITY IMAGE + QUOTE + TEXT ---------------------->
+
+  <section id="8">
+    <div class="mt-60">
+    <h1 class="font-bold text-3xl text-center py-20">
+      Connecting Walkable Communities through Transit
+    </h1>
+    <div class="ml-32 pt-0 mr-8 px-4 sm:px-6 lg:max-w-7xl lg:px-8 flex justify-between">
+      <div class="w-96">
+        <div class="lg:flex lg:flex-auto lg:justify-center">
+          <p class="text-2xl italic justify-center">
+            “Even if individual neighborhoods are walkable,
+            if they are disconnected from one another and
+            people still have to drive to get around, the
+            overall walkability of the city is limited." <br><br>
+            - Jeff Speck (renowned urban planner)
+          </p>
+
+
+        
+        </div>
+      </div>
+      <img class="w-3/5" src="./images/transit.png">
+    </div>
+
+    <div class="w-full px-0 mt-16">
+      <div class="p-6 bg-white-2 rounded-lg mx-28">
+        <p>
+          Accessible transit allows for the connection of one walkable census tract to another. 
+          Connectivity of walkable census tracts throughout Vancouver allows people to commute in a
+         way where they can start and end their journeys on foot. 
+        </p>
+      </div>
+    </div>
+    
+    </div>
+  </section>
+
+<!---------------------- SECTION: POPULATION PROJECTION ---------------------->
+
+  <section id="9">
+    <div class="ml-24 mt-60 max-w-3xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+        <h1 class="font-bold text-3xl text-center py-20">
+        Population Growth Projection for the City of Vancouver 2023-2040
+        </h1>
+        <!-- Main 3 column grid -->
+        <div class="grid grid-cols-1 items-start lg:grid-cols-3 gap-2">
+          <!-- Left column -->
+
+    
+          <!-- Right column -->
+          <div class="grid grid-cols-1 gap-4">
+              <div class="overflow-hidden rounded-lg bg-white-1 map_height">
+                 <p class="p-8 text-lg">
+                 The projected population growth of each census tract within the City of Vancouver
+                 helps build a better understanding of which areas will experience the majority of this growth.
+                 <br><br>
+                 From this, we expect the highest growth around False Creek, with additional strong future growth
+                 in population around the downtown core and some of the neighbourhoods bordering the Fraser River.
+                </p>
+              </div>
+          </div>
+
+          <!-- Left column -->
+          <div class="grid grid-cols-1 gap-0 lg:col-span-2">
+              <div class="overflow-hidden rounded-lg bg-blue-2 shadow p-2 map_height">
+                <div class="">
+                  <!--  Your Content -->
+                   {{ population_proj_map }} 
+                  <!-- <img src="./images/population_map.png"> -->
+                </div>
+              </div>
+          </div>
+        </div>
+    </div>
+    </section>
+
+<!---------------------- SECTION: RECOMMENDATION ----------------------> 
+<section id="10">
+  <div class="ml-24 mt-60 max-w-3xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+    <h1 class="font-bold text-3xl text-center py-20">
+      Steps for Building a More Walkable City
+  </h1>
+  <img src="./images/rec.png">
+
+    <div class="w-full px-0 mt-20">
+      <div class="p-6 bg-white-2 rounded-lg mx-28">
+        <p>
+          To enhance walkability we suggest the following recommendations. 
+      First, effective walkability involves the consultation of community members. 
+      The city should then consider rezoning areas to allow for more mixed use buildings. 
+      Incentivizing these developments in key areas will also help to achieve this vision. 
+      All of this cannot be done without ensuring safe pedestrian infrastructure that makes 
+      urban mobility equitable for minority groups. The final piece of the puzzle involves 
+      accessible transportation to connect walkable communities together, creating a cohesive, walkable city. 
+        </p>
+      </div>
+    </div>
+
+
+  </div>
+</section>
+
+    <!-- Empty space at bottom of page -->
+<section id="11" >
+    <h1 class="font-bold text-bigger text-center py-20 mt-96">
+      Let's <b class="text-blue-2">step</b> into the future.
+  </h1>
+  
+  
+  <div class="mb-72"></div>
+
+  <script src="main.js"></script>
+</section>
+</body>
+</html>

@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+
+.selected-circle {
+    @apply border-blue-2 bg-blue-2;
+}
+
+.wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.wave svg {
+    position: relative;
+    display: block;
+    width: calc(134% + 1.3px);
+    height: 44px;
+    transform: rotateY(180deg);
+}
+
+.wave .shape-fill {
+    fill: #FFFFFF;
+}
+
+.map_height {
+    height: 26rem;
+}
+
+.text-bigger {
+    font-size: 4rem/* 60px */;
+    line-height: 1;
+}
+.h-45 {
+    height: 1.125rem/* 16px */;
+}
+.w-45 {
+    width: 1.125rem/* 16px */;
+}
+
+.button-active {
+    background-color: #F2F2F2;
+    color: #3876F2;
+}
