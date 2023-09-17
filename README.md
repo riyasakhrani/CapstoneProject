@@ -7,4 +7,5 @@ Link to the website:
 https://shiny.rcg.sfu.ca/u/sweldon/Walkability/
 
 Launching the App:
-In an R IDE, enter: runApp("Vancouver-Walkability-Analysis")
+Open global.R in an R IDE and run the app. 
+* Note: Open in browser 
